@@ -283,7 +283,7 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         //Testing Enemies
-        spawn++;
+        // spawn++;
 
         if(spawn >= spawnRate)
         {
