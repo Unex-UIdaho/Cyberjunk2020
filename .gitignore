@@ -4,3 +4,5 @@
 /.vs/
 /Logs/
 *.csproj
+.DS_Store
+*.sln
