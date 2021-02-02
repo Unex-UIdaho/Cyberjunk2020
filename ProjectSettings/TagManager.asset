@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Bullet
+  - Collision
+  - Tile
+  - Weapon
+  - EnemyWeapon
+  - EnemyBullet
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Weapons
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Background
+    uniqueID: 943326095
+    locked: 0
+  - name: Weapons_Behind
+    uniqueID: 771657387
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Weapons_Front
+    uniqueID: 3387915141
+    locked: 0
+  - name: Cursor
+    uniqueID: 2675726303
+    locked: 0
