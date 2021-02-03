@@ -107,7 +107,7 @@ public class GameManager : MonoBehaviour
         {
             xTilePos[i] = TileParent.transform.GetChild(i).transform.position.x;
             yTilePos[i] = TileParent.transform.GetChild(i).transform.position.y;
-            Debug.Log(xTilePos[i] + ", " + yTilePos[i]);
+            // Debug.Log(xTilePos[i] + ", " + yTilePos[i]);
         }
 
         /*foreach (Transform child in TileParent.transform)
@@ -283,7 +283,7 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         //Testing Enemies
-        // spawn++;
+        spawn++;
 
         if(spawn >= spawnRate)
         {
