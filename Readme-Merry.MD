@@ -1,4 +1,4 @@
 Merry's Readme
 
 Features
-- Boss Battles
+- Boss Battles (inheriting from enemy class)
