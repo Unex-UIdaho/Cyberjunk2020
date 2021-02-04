@@ -4,7 +4,7 @@ Main Repo for Cyberjunk2020, an upcoming 2D top-down Bullet Hell game
 Quick Launch from Files
 1. Download the zipped Cyberjunk2020 files from GITHUB.
 2. Extract zipped file folder to access original files and set up game components.
-3. Double Click Cyberjunk2020.exe application.
+3. Double Click Cyberjunk2020.exe application if there, if not follow the instructions below.
 
 Using Unity
 1. Open Unity or download it at https://store.unity.com/download-nuo
