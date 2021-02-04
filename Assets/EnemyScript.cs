@@ -84,6 +84,10 @@ public class EnemyScript : MonoBehaviour
         }
 
         selfsort = gameObject.GetComponent<SpriteRenderer>();
+		  
+		if (!player) {
+			player = GameObject.FindWithTag("Player");
+		}
 
         if (player)
         {

@@ -156,7 +156,7 @@ public class PlayerMovement : MonoBehaviour
         {
             BulletScript bulletScript = col.GetComponent<BulletScript>();
 
-            Health -= bulletScript.bulletDamage;
+            // Health -= bulletScript.bulletDamage;
             Destroy(col.gameObject);
             GetComponent<Renderer>().material.color = Color.red;
 

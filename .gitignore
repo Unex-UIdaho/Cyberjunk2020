@@ -1,8 +1,8 @@
-/Library/
+/Library/*
 /Temp/
 /obj/
 /.vs/
 /Logs/
 *.csproj
-.DS_Store
+**/.DS_Store
 *.sln
