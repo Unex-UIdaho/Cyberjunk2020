@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// worked on by
+// Ezequiel
+// Merry
+
 //This script is given to ALL Gun prefabs////////////////////////////////////
 public class GunScript : MonoBehaviour
 {
@@ -16,6 +20,9 @@ public class GunScript : MonoBehaviour
     public float bulletSpeed;
     public float bulletRange;
     public float bulletSpread = 1;
+	public float bulletSpreadAngle = 0; // default 6 degrees
+	public float bulletAccel = 0;
+	public float bulletAngVel = 0;
     public bool bulletSpreadRandom;
 
     float tempAssault = 0;
@@ -52,7 +59,6 @@ public class GunScript : MonoBehaviour
         Shaker = Object.FindObjectOfType<ScreenShake>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (automaticAssault == true)
@@ -74,8 +80,8 @@ public class GunScript : MonoBehaviour
         if ((((Input.GetMouseButtonDown(0) && automaticAssault == false) ||
             (Input.GetMouseButtonDown(0) && automaticAssault == true && tempAssault <= 0) ||
             (Input.GetMouseButton(0) && automaticAssault == true && tempAssault <= 0)) && tag == "Weapon") ||
-            (shoot == true && semi_temp <= 0 && (automaticAssault == false) || (shoot == true && automaticAssault == true && tempAssault <= 0) && tag == "EnemyWeapon"))
-        {
+            (shoot == true && semi_temp <= 0 && (automaticAssault == false) ||
+			(shoot == true && automaticAssault == true && tempAssault <= 0) && tag == "EnemyWeapon")) {
             if (tag == "Weapon")
             {
                 Shaker.Shake(duration, intensity);
@@ -123,9 +129,7 @@ public class GunScript : MonoBehaviour
 
             for (int i = 0; i < bulletSpread; i++)
             {
-                //Bullet Spread
-                float bulletSpreadAngle;
-
+				float tempAngle = 0;
                 // Instantiate at position (0, 0, 0) and zero rotation.
                 GameObject bullet = Instantiate(Bullet, new Vector3(pos_x + (offsetx_width * (width / 2)) + (sign * offsetx_height * (height / 6)), pos_y + (offsety_width * (width / 2)) + (sign * offsety_height * (height / 6)), 0), transform.rotation) as GameObject;
 
@@ -153,14 +157,13 @@ public class GunScript : MonoBehaviour
                 }
 
                 //Bullet Spread
-                if (bulletSpread > 1)
-                {
-                    bulletSpreadAngle = (((i) / (bulletSpread - 1)) * (bulletSpread * 6)) - (bulletSpread * 6) / 2;
-                }
-                else
-                {
-                    bulletSpreadAngle = 0;
-                }
+				if (bulletSpreadAngle <= 0) {
+					bulletSpreadAngle = 6;
+				}
+				
+				if (bulletSpread > 1) {
+					tempAngle = (i / (bulletSpread - 1) * bulletSpread * bulletSpreadAngle) - bulletSpread * bulletSpreadAngle / 2;
+				}
 
                 //Offset Bullet Angle
                 if (bulletSpreadRandom == true)
@@ -174,7 +177,7 @@ public class GunScript : MonoBehaviour
 
                 //Data given to bullet
 
-                bulletScript.bulletAngle = (bulletAngle + bulletSpreadAngle + offset_angle) * (Mathf.PI / 180);
+                bulletScript.bulletAngle = (bulletAngle + tempAngle + offset_angle) * (Mathf.PI / 180);
                 bulletScript.transform.localScale = transform.localScale;
 
                 //bullet.transform.Rotate(45, 0, 0);
@@ -182,12 +185,14 @@ public class GunScript : MonoBehaviour
                 bullet.transform.eulerAngles = new Vector3(
                     bullet.transform.eulerAngles.x,
                     bullet.transform.eulerAngles.y,
-                    bullet.transform.eulerAngles.z + bulletSpreadAngle + offset_angle
+                    bullet.transform.eulerAngles.z + tempAngle + offset_angle
                 );
 
                 bulletScript.bulletDamage = bulletDamage;
                 bulletScript.bulletSpeed = bulletSpeed;
                 bulletScript.bulletRange = bulletRange;
+                bulletScript.bulletAccel = bulletAccel;
+                bulletScript.bulletAngVel = bulletAngVel;
 
                 //bulletScript.sortingLayer = sprite.sortingLayerName;
             }

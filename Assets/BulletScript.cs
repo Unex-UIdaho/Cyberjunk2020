@@ -10,6 +10,8 @@ public class BulletScript : MonoBehaviour
     public float bulletDamage;
     public float bulletSpeed;
     public float bulletRange;
+	public float bulletAccel;
+	public float bulletAngVel;
 
     public float deltaTime;
 
@@ -46,6 +48,7 @@ public class BulletScript : MonoBehaviour
         //Current position
         currentPosition = transform.position;
 
+		transform.Rotate(0, 0, bulletAngVel / 3.5f);
         //bulletAngle = angleTemp * (Mathf.PI/180);
         movement.x = Mathf.Sin(-bulletAngle - (Mathf.PI / 2));
         movement.y = Mathf.Cos(-bulletAngle - (Mathf.PI / 2));
@@ -68,6 +71,8 @@ public class BulletScript : MonoBehaviour
     void FixedUpdate()
     {
         //Movement
+		bulletSpeed += bulletAccel * Time.deltaTime;
+		bulletAngle += bulletAngVel * Time.deltaTime;
         rb.MovePosition(rb.position + (movement * -bulletSpeed * Time.fixedDeltaTime));
     }
 }

@@ -120,7 +120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Health: 50
-  moveSpeed: 5
+  moveSpeed: 7.5
   weapon: {fileID: 5140099294977888472, guid: 0c497acd30948a0459c4d33dc1340a4c, type: 3}
   rb: {fileID: 7770893479020739955}
   animator: {fileID: 7770893479020739948}

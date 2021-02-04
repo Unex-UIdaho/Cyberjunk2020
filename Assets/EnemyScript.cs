@@ -132,7 +132,7 @@ public class EnemyScript : MonoBehaviour
         movement.y = 0;
 
         movementx = player_position.x - transform.position.x;
-        movementy = player_position.y - transform.position.y;
+        movementy = player_position.y - transform.position.y - 0.5f;
 
         animator.SetFloat("Horizontal", movementx);
         animator.SetFloat("Vertical", movementy);
@@ -152,14 +152,14 @@ public class EnemyScript : MonoBehaviour
             if (Mathf.Sign(movementx) > 0)
             {
                 //rotation = Quaternion.LookRotation(player_position - weapon.transform.position, weapon.transform.TransformDirection(Vector3.up));
-                rotation = Mathf.Atan2((player_position.y - 0.5f) - weapon.transform.position.y, player_position.x - weapon.transform.position.x) * Mathf.Rad2Deg;
+                rotation = Mathf.Atan2((player_position.y - 0.75f) - weapon.transform.position.y, player_position.x - weapon.transform.position.x) * Mathf.Rad2Deg;
                 weapon.transform.rotation = Quaternion.Euler(0, 0, rotation);
                 weapon.transform.position = transform.position + offset_right;
             }
             else
             {
                 //rotation = Quaternion.LookRotation(weapon.transform.position - player_position, weapon.transform.TransformDirection(Vector3.right));
-                rotation = Mathf.Atan2(weapon.transform.position.y - (player_position.y - 0.5f), weapon.transform.position.x - player_position.x) * Mathf.Rad2Deg;
+                rotation = Mathf.Atan2(weapon.transform.position.y - (player_position.y - 0.75f), weapon.transform.position.x - player_position.x) * Mathf.Rad2Deg;
                 weapon.transform.rotation = Quaternion.Euler(0, 0, rotation);
                 weapon.transform.position = transform.position + offset_left;
             }

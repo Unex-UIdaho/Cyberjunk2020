@@ -75,6 +75,11 @@ PrefabInstance:
         type: 3}
     - target: {fileID: 5140099294977888479, guid: 0c497acd30948a0459c4d33dc1340a4c,
         type: 3}
+      propertyPath: bulletAccel
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5140099294977888479, guid: 0c497acd30948a0459c4d33dc1340a4c,
+        type: 3}
       propertyPath: bulletImage
       value: 
       objectReference: {fileID: 21300000, guid: 0eabe5360b783d743bbfaaac7600a56b,
@@ -86,8 +91,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5140099294977888479, guid: 0c497acd30948a0459c4d33dc1340a4c,
         type: 3}
+      propertyPath: bulletSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5140099294977888479, guid: 0c497acd30948a0459c4d33dc1340a4c,
+        type: 3}
       propertyPath: assaultDelay
-      value: 100
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5140099294977888479, guid: 0c497acd30948a0459c4d33dc1340a4c,
+        type: 3}
+      propertyPath: bulletAngVel
+      value: 1.25
       objectReference: {fileID: 0}
     - target: {fileID: 5140099294977888479, guid: 0c497acd30948a0459c4d33dc1340a4c,
         type: 3}
@@ -103,6 +118,11 @@ PrefabInstance:
         type: 3}
       propertyPath: automaticAssault
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5140099294977888479, guid: 0c497acd30948a0459c4d33dc1340a4c,
+        type: 3}
+      propertyPath: bulletSpreadAngle
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5140099294977888479, guid: 0c497acd30948a0459c4d33dc1340a4c,
         type: 3}

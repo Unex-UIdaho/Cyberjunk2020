@@ -94,14 +94,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d67ff71f442f7014caa80d550d470704, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Bullet: {fileID: 488746334689681232, guid: abf9674801c0b584ba3f31ce2934a882, type: 3}
+  Bullet: {fileID: 7368229585212389126, guid: 12412caa01aaf7a4abcacc64ebc7a044, type: 3}
   duration: 0.2
-  intensity: 30
+  intensity: 0
   automaticAssault: 0
   assaultDelay: 25
   bulletDamage: 10
-  bulletSpeed: 10
+  bulletSpeed: 5
   bulletRange: 100
   bulletSpread: 1
+  bulletSpreadAngle: 0
+  bulletAccel: 1
+  bulletAngularVel: 0
   bulletSpreadRandom: 0
   enemyParent: {fileID: 0}
