@@ -5,9 +5,6 @@ using UnityEngine;
 //This script is given to the Cusor prefab////////////////////////////////////
 public class TargetScript : MonoBehaviour
 {
-    
-
-
     Vector3 mouse_position;
 
     public Rigidbody2D rb;
@@ -17,8 +14,6 @@ public class TargetScript : MonoBehaviour
     {
         Cursor.visible = false;
     }
-
-
 
     // Update is called once per frame
     void Update()

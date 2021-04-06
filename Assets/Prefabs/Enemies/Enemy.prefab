@@ -10,14 +10,17 @@ GameObject:
   m_Component:
   - component: {fileID: 1688376386771329562}
   - component: {fileID: 1688376386771329563}
+  - component: {fileID: 1688376386771329556}
   - component: {fileID: 2997945609512983078}
   - component: {fileID: 3199940851913894687}
-  - component: {fileID: 1688376386771329556}
-  - component: {fileID: 7762834401960936581}
   - component: {fileID: -7449843713395817203}
-  m_Layer: 0
+  - component: {fileID: -2535807651480978258}
+  - component: {fileID: -441160279052123074}
+  - component: {fileID: 2430796617432967962}
+  - component: {fileID: 7762834401960936581}
+  m_Layer: 9
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -54,7 +57,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -86,6 +89,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1688376386771329556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1688376386771329560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92e3d7f4aeec48f459ee09538f85a1d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startDelay: 20
+  maxHealth: 50
+  healthbar: {fileID: 7807128909882388774, guid: a123ee0082692d146890fb766cdc2663,
+    type: 3}
+  Hand: {fileID: 2001255764628732154, guid: 5a1d521e3f85986498548df10a8597d3, type: 3}
+  weapon: {fileID: 5140099294977888472, guid: 0c497acd30948a0459c4d33dc1340a4c, type: 3}
+  moveSpeed: 5
+  rb: {fileID: 2997945609512983078}
+  animator: {fileID: -7449843713395817203}
+  shoot: 0
 --- !u!50 &2997945609512983078
 Rigidbody2D:
   serializedVersion: 4
@@ -133,7 +158,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.9385021, y: 0.9989486}
   m_EdgeRadius: 0
---- !u!114 &1688376386771329556
+--- !u!95 &-7449843713395817203
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1688376386771329560}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 22100000, guid: c584db5549e2a894ebde4948b467dc8f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-2535807651480978258
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -142,15 +186,75 @@ MonoBehaviour:
   m_GameObject: {fileID: 1688376386771329560}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92e3d7f4aeec48f459ee09538f85a1d0, type: 3}
+  m_Script: {fileID: 11500000, guid: 373b52eb9bf8c40f785bb6947a1aee66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 50
-  weapon: {fileID: 4613423571616980980, guid: 1a8570a15dff1ed4e85c090832f1bc95, type: 3}
-  moveSpeed: 5
-  rb: {fileID: 2997945609512983078}
-  animator: {fileID: -7449843713395817203}
-  shoot: 0
+  version: 1
+  drawGizmos: 1
+  detailedGizmos: 0
+  startEndModifier:
+    addPoints: 0
+    exactStartPoint: 3
+    exactEndPoint: 3
+    useRaycasting: 0
+    mask:
+      serializedVersion: 2
+      m_Bits: 4294967295
+    useGraphRaycasting: 0
+  traversableTags: -1
+  tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  graphMask:
+    value: -1
+--- !u!114 &-441160279052123074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1688376386771329560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6eb1402c17e84a9282a7f0f62eb584f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 2
+  radius: 0.5
+  height: 2
+  repathRate: 0.5
+  canSearch: 1
+  canMove: 1
+  maxSpeed: 2
+  gravity: {x: NaN, y: NaN, z: NaN}
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  centerOffsetCompatibility: NaN
+  orientation: 1
+  enableRotation: 0
+  targetCompatibility: {fileID: 0}
+  maxAcceleration: -2.5
+  rotationSpeed: 360
+  slowdownDistance: 0.6
+  pickNextWaypointDist: 1.2
+  endReachedDistance: 0.2
+  alwaysDrawGizmos: 0
+  slowWhenNotFacingTarget: 1
+  whenCloseToDestination: 0
+  constrainInsideGraph: 0
+--- !u!114 &2430796617432967962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1688376386771329560}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9679e68a0f1144e79c664d9a11ca121, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+  target: {fileID: 7770893479020739949, guid: 9c5f4d6886c6f9a4c8bb6a663cbb4d8b, type: 3}
 --- !u!114 &7762834401960936581
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -166,22 +270,3 @@ MonoBehaviour:
   lowestDepth: 0
   highestDepth: 0
   offset: 0
---- !u!95 &-7449843713395817203
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1688376386771329560}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 268fefa26615ac044870a23b7e61b449, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
