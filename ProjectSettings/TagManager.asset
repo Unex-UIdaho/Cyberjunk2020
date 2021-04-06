@@ -5,11 +5,13 @@ TagManager:
   serializedVersion: 2
   tags:
   - Bullet
+  - Weapon
   - Collision
   - Tile
-  - Weapon
   - EnemyWeapon
   - EnemyBullet
+  - PlayerSpawn
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -19,8 +21,8 @@ TagManager:
   - UI
   - 
   - 
-  - Weapons
-  - 
+  - Background
+  - Obstacle
   - 
   - 
   - 
@@ -45,17 +47,14 @@ TagManager:
   - 
   m_SortingLayers:
   - name: Background
-    uniqueID: 943326095
-    locked: 0
-  - name: Weapons_Behind
-    uniqueID: 771657387
+    uniqueID: 2265102657
     locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Weapons_Front
-    uniqueID: 3387915141
+  - name: UI
+    uniqueID: 1164700231
     locked: 0
   - name: Cursor
-    uniqueID: 2675726303
+    uniqueID: 2894770943
     locked: 0

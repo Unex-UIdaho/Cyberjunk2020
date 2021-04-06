@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.TestTools;
 using UnityEngine.SceneManagement;
 
-namespace BulletTests
+namespace Tests
 {
     public class ERBulletTest
     {

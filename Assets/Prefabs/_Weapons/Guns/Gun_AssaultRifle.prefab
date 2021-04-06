@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3389156258747218238}
   - component: {fileID: 4706335664400769119}
   - component: {fileID: -4378383820286630341}
+  - component: {fileID: 1250820769899391148}
   - component: {fileID: 956466922031002457}
   m_Layer: 0
   m_Name: Gun_AssaultRifle
@@ -136,7 +137,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: fc1d942f8828df742a653becdf1b4ee0, type: 3}
+  m_audioClip: {fileID: 8300000, guid: cccc780f232a0ea4aae03a5db3bdd670, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.5
   m_Pitch: 1
@@ -222,6 +223,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1250820769899391148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4204049765109383631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8e44a22ee4577940a83aa186a5d4980, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &956466922031002457
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -231,6 +244,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 4204049765109383631}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 21ac742101e93114eb4b53048cdd1374, type: 3}
+  m_Script: {fileID: 11500000, guid: 1d24a697442f1ea4f94683696e0960b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lowestDepth: 0
+  highestDepth: 0
+  offset: 0

@@ -390,7 +390,10 @@ public class GunScript : MonoBehaviour
                 );
             }*/
 
-            soundHandler.PlaySound();
+            if (soundHandler)
+            {
+                soundHandler.PlaySound();
+            }
 
             if (tag == "Weapon")
             {

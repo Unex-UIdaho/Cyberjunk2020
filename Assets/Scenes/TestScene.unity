@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -475,7 +475,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mapBounds: {fileID: 1609531523}
-  playerSpawn: {fileID: 0}
+  playerSpawn: {fileID: 513175258256510940, guid: 1fc689cb745f6794b9831a95d9c9e576,
+    type: 3}
   Enemy: {fileID: 1688376386771329560, guid: 5f8230640e4e885468e7ce61eb3f9044, type: 3}
   maxEnemiesOnScreen: 20
   spawnRate: 1000
@@ -764,7 +765,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 829039207}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5bf038308d27a6249ad5e095bf8dfaa9, type: 3}
+  m_Script: {fileID: 11500000, guid: d715f5524cf41144fb9a417e2c4f398a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   dashCount: 0
