@@ -12,4 +12,7 @@ a. Follow install instruction for unity and install the latest version.
 2. Select the open file option in the top left corner of unity
 3. Select the extracted folder from the zip file.
 4. This will open unity and have Cyberjunk2020 loaded into it.
-5. Select File then click build and run.
+5. Select File -> Build Settings
+6. Select PC, Mac and Linux Standalone
+7. Select Platform and Architecture type.
+8. Build and Run
